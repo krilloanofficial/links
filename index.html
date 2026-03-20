@@ -7,92 +7,119 @@
 
 <style>
 body {
-margin: 0;
-background: radial-gradient(circle at top, #1a1a1a, #000);
-color: #fff;
-font-family: Arial, sans-serif;
-text-align: center;
+  margin: 0;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 .container {
-max-width: 520px;
-margin: auto;
-padding: 20px;
+  max-width: 520px;
+  margin: auto;
+  padding: 20px;
+}
+
+.logo {
+  width: 150px;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 h1 {
-letter-spacing: 5px;
-font-size: 32px;
-animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-from { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
-to { text-shadow: 0 0 25px rgba(255,255,255,0.9); }
+  letter-spacing: 4px;
+  font-size: 30px;
+  text-shadow: 0 0 15px rgba(255,255,255,0.4);
+  margin-bottom: 5px;
 }
 
 .subtitle {
-color: #aaa;
-margin-bottom: 25px;
+  color: #aaa;
+  margin-bottom: 15px;
 }
 
-.section-title {
-margin-top: 20px;
-font-size: 12px;
-color: #777;
-letter-spacing: 2px;
+/* Spotify embed */
+iframe {
+  width: 100%;
+  height: 152px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 20px;
 }
 
+/* Buttons */
 .button {
-display: block;
-background: #111;
-margin: 10px 0;
-padding: 15px;
-text-decoration: none;
-color: white;
-border: 1px solid #333;
-border-radius: 6px;
-transition: 0.25s;
-font-weight: bold;
-letter-spacing: 1px;
+  display: block;
+  background: #111;
+  margin: 10px 0;
+  padding: 14px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 5px;
+  transition: 0.2s;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .button:hover {
-background: #222;
-box-shadow: 0 0 15px rgba(255,255,255,0.4);
-transform: translateY(-2px);
+  background: #222;
+  box-shadow: 0 0 12px rgba(255,255,255,0.3);
 }
 
 .listen { border-color: #1db954; }
 .buy { border-color: #e63946; }
 
+/* Merch button style */
+.merch { 
+  border-color: #ff6600; 
+  background: #ff3300;
+}
+.merch:hover {
+  background: #ff4500;
+  box-shadow: 0 0 20px rgba(255,102,0,0.6);
+}
+
+.section-title {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #777;
+  letter-spacing: 2px;
+}
+
+/* Album hover glow */
 .album {
-margin-top: 40px;
-transition: 0.3s;
+  margin-bottom: 50px;
+  transition: 0.3s;
 }
 
 .album img {
-width: 100%;
-border-radius: 10px;
-box-shadow: 0 0 25px rgba(255,140,0,0.3);
-transition: 0.3s;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255,140,0,0.25);
+  transition: 0.3s;
 }
 
 .album img:hover {
-transform: scale(1.03);
-box-shadow: 0 0 40px rgba(255,140,0,0.6);
+  transform: scale(1.03);
+  box-shadow: 0 0 50px rgba(255,140,0,0.6);
 }
 
 .footer {
-margin-top: 50px;
-font-size: 11px;
-color: #555;
+  margin-top: 50px;
+  font-size: 11px;
+  color: #555;
 }
 
-/* Spotify embed */
-iframe {
-margin-top: 15px;
-border-radius: 12px;
+/* Mobile tweaks */
+@media (max-width: 400px) {
+  .button {
+    font-size: 15px;
+    padding: 12px;
+  }
+  h1 {
+    font-size: 26px;
+  }
 }
 </style>
 </head>
@@ -101,27 +128,24 @@ border-radius: 12px;
 
 <div class="container">
 
+<!-- Logo -->
+<img src="logo.jpg" alt="KRILLOAN Logo" class="logo">
+
 <h1>⚔️ KRILLOAN ⚔️</h1>
 <p class="subtitle">Epic Power Metal</p>
 
-<!-- SPOTIFY PLAYER -->
-<iframe style="border-radius:12px"
-src="https://open.spotify.com/embed/artist/6MfUFhthUp7MKoqNEfdwN5"
-width="100%" height="152" frameborder="0"
-allowfullscreen=""
-allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-</iframe>
+<!-- Spotify Embed -->
+<iframe src="https://open.spotify.com/embed/artist/6MfUFhthUp7MKoqNEfdwN5" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
 <!-- LISTEN -->
 <div class="section-title">🎧 LISTEN NOW</div>
-<a class="button listen" href="https://open.spotify.com/artist/6MfUFhthUp7MKoqNEfdwN5">Spotify</a>
+<a class="button listen" href="https://open.spotify.com/artist/6MfUFhthUp7MKoqNEfdwN5?si=-vzvXWAwSaK5OcueNLV-Pw">Spotify</a>
 <a class="button listen" href="https://music.apple.com/se/artist/krilloan/1503311929">Apple Music</a>
 
 <!-- ALBUM 1 -->
 <div class="album">
 <img src="heralds.jpg" alt="Return Of The Heralds">
 <h2>Return Of The Heralds</h2>
-
 <div class="section-title">💿 BUY</div>
 <a class="button buy" href="https://www.amazon.com/Return-Heralds-Krilloan/dp/B0D94HDF79">Amazon (US/BR)</a>
 <a class="button buy" href="https://www.bengans.se/krilloan-return-of-the-heralds-red-marbled">Bengans (SE)</a>
@@ -132,7 +156,6 @@ allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-pictur
 <div class="album">
 <img src="emperor.jpg" alt="Emperor Rising">
 <h2>Emperor Rising</h2>
-
 <div class="section-title">💿 BUY</div>
 <a class="button buy" href="https://scarletrecords.bandcamp.com/album/emperor-rising">Bandcamp</a>
 <a class="button buy" href="https://www.amazon.com/s?k=Krilloan+Emperor+Rising">Amazon</a>
@@ -143,6 +166,10 @@ allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-pictur
 <a class="button" href="https://www.amazon.fr/s?k=Krilloan+Return+Of+The+Heralds">🇫🇷 France</a>
 <a class="button" href="https://www.amazon.es/s?k=Krilloan+Return+Of+The+Heralds">🇪🇸 Spain</a>
 <a class="button" href="https://www.amazon.ca/s?k=Krilloan+Emperor+Rising">🇨🇦 Canada</a>
+
+<!-- MERCH -->
+<div class="section-title">🛒 MERCH</div>
+<a class="button merch" href="https://stores.merchprint.se/produkter/krilloan/">KRILLOAN MERCH</a>
 
 <div class="footer">
 Forged in Steel • Powered by Metal ⚔️
